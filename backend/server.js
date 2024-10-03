@@ -1,32 +1,17 @@
+// server.js
 const express = require('express');
-const cors = require('cors');
-const bodyParser = require('body-parser');
-const dotenv = require("dotenv");
-const connectDB = require("./config/db");
+const dotenv = require('dotenv');
+const connectDB = require('./config/db');
+const voterRoutes = require('./routes/voterRoutes.js');
 
 dotenv.config();
+console.log('MongoDB URI:', process.env.MONGODB_URI);
 
 const app = express();
-
-// Middleware
-app.use(cors());
-app.use(bodyParser.json());
-app.use(express.json());
-
-// Connect to MongoDB
 connectDB();
 
-// API Routes
-const apiRoutes = require("./routes/api");
-app.use("/api", apiRoutes);
+app.use(express.json());
+app.use('/api/voters', voterRoutes);
 
 const PORT = process.env.PORT || 5000;
-
-// Routes
-app.get('/', (req, res) => {
-  res.send('Blockchain Voting System Backend');
-});
-
-app.listen(5000, () => {
-  console.log(`Server running on port http://localhost:${PORT}`);
-});
+app.listen(PORT, () => console.log(`http://localhost:${PORT}`));

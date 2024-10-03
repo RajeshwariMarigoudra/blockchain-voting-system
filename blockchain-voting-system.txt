@@ -13,9 +13,9 @@ blockchain-voting-system/
 │   │   └── voterRoutes.js # Routes for voter registration, voting
 │   ├── services/         # Business logic and blockchain interaction
 │   │   └── voteService.js # Handles interactions with Ethereum blockchain, submitting votes
-│   ├── smart-contracts/  # Solidity contracts for blockchain interaction
-│   │   ├── Election.sol  # Smart contract for the voting process (written in Solidity)
-│   │   └── Migrations.sol # Handles migration of the smart contracts to the blockchain
+│   ├
+│   │   
+│   │  
 │   ├── utils/            # Utility functions (e.g., cryptography, blockchain interaction)
 │   │   └── cryptoUtils.js # Cryptography functions for securing votes
 │   ├── tests/            # Unit and integration tests for the backend
@@ -26,8 +26,8 @@ blockchain-voting-system/
 │
 ├── frontend/             # Frontend React code
 │   ├── public/           # Static assets like images, index.html, stylesheets
-│   │   ├── index.html    # Main HTML file for the React app
-│   │   └── styles.css    # Global CSS file for the React app
+│   │       # Main HTML file for the React app
+│   │      # Global CSS file for the React app
 │   ├── src/              # Main application source code
 │   │   ├── assets/       # Static assets like fonts, icons
 │   │   ├── components/   # Reusable React components
@@ -45,7 +45,9 @@ blockchain-voting-system/
 │   │   ├── utils/        # Utility functions (e.g., form validation, date handling)
 │   │   │   └── formValidation.js # Utility to handle form validation (e.g., voter registration)
 │   │   ├── App.js        # Root component for React app
-│   │   ├── index.js      # Entry point of the React application
+|    |   |___App.css
+|    |   |___ index.css
+│   │   ├── main.jsx      # Entry point of the React application
 │   │   └── package.json  # Frontend dependencies and scripts
 │   └── .env              # Frontend environment variables (e.g., API URLs)
 │
