@@ -5,7 +5,7 @@ import { registerVoter } from "../services/voterService";
 import { validateRegistrationForm } from "../utils/formValidation"; // Note: remove .jsx extension
 
 const VoterRegistration = () => {
-    const [formData, setFormData] = useState({ voterId: "", name: "" });
+    const [formData, setFormData] = useState({ voterId: "", name: ""});
     const [error, setError] = useState(null);
     const [successMessage, setSuccessMessage] = useState("");
 

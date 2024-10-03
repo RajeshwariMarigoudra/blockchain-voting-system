@@ -1,0 +1,74 @@
+blockchain-voting-system/
+│
+├── backend/              # Backend Node.js code with Blockchain integration
+│   ├── config/           # Configuration files (e.g., .env)
+│   │   └── db.js         # Database configuration (e.g., MongoDB connection)
+│   ├── controllers/      # Controllers for handling API requests
+│   │   └── voterController.js # Contains logic for voter registration, vote submission
+│   ├── middleware/       # Middleware for authentication, error handling
+│   │   └── auth.js       # Authentication middleware (e.g., JWT-based authentication)
+│   ├── models/           # Database models, schemas
+│   │   └── Voter.js      # Schema for voter information
+│   ├── routes/           # API route definitions
+│   │   └── voterRoutes.js # Routes for voter registration, voting
+│   ├── services/         # Business logic and blockchain interaction
+│   │   └── voteService.js # Handles interactions with Ethereum blockchain, submitting votes
+│   ├── smart-contracts/  # Solidity contracts for blockchain interaction
+│   │   ├── Election.sol  # Smart contract for the voting process (written in Solidity)
+│   │   └── Migrations.sol # Handles migration of the smart contracts to the blockchain
+│   ├── utils/            # Utility functions (e.g., cryptography, blockchain interaction)
+│   │   └── cryptoUtils.js # Cryptography functions for securing votes
+│   ├── tests/            # Unit and integration tests for the backend
+│   │   ├── voter.test.js # Unit test for voter registration and authentication
+│   │   └── vote.test.js  # Unit test for vote casting and blockchain integration
+│   ├── server.js         # Main server file to start the Node.js app
+│   └── package.json      # Backend dependencies and scripts
+│
+├── frontend/             # Frontend React code
+│   ├── public/           # Static assets like images, index.html, stylesheets
+│   │   ├── index.html    # Main HTML file for the React app
+│   │   └── styles.css    # Global CSS file for the React app
+│   ├── src/              # Main application source code
+│   │   ├── assets/       # Static assets like fonts, icons
+│   │   ├── components/   # Reusable React components
+│   │   │   ├── VoterRegistration.js # Component for voter registration form
+│   │   │   ├── VotingPage.js # Component for the voting interface
+│   │   │   └── ResultsPage.js # Component for displaying election results
+│   │   ├── hooks/        # Custom React hooks
+│   │   │   └── useVote.js # Hook for interacting with the vote submission logic
+│   │   ├── pages/        # Pages for different UI screens (e.g., voter registration, voting)
+│   │   │   └── HomePage.js  # Main landing page of the voting system
+│   │   ├── services/     # API calls and interactions with backend
+│   │   │   └── voterService.js # Service for API calls related to voter registration
+│   │   ├── state/        # State management (using Context API or Redux)
+│   │   │   └── voteContext.js # Context for handling voting data globally
+│   │   ├── utils/        # Utility functions (e.g., form validation, date handling)
+│   │   │   └── formValidation.js # Utility to handle form validation (e.g., voter registration)
+│   │   ├── App.js        # Root component for React app
+│   │   ├── index.js      # Entry point of the React application
+│   │   └── package.json  # Frontend dependencies and scripts
+│   └── .env              # Frontend environment variables (e.g., API URLs)
+│
+├── blockchain/           # Blockchain-related files
+│   ├── contracts/        # Smart contracts written in Solidity
+│   │   ├── Election.sol  # Smart contract for voting
+│   │   └── Migrations.sol # Solidity migration contract
+│   ├── migrations/       # Migration scripts for deploying contracts
+│   │   └── 1_initial_migration.js # Migration script to deploy contracts to Ethereum
+│   ├── test/             # Testing contracts with tools like Mocha
+│   │   └── Election.test.js # Unit tests for the Election contract
+│   ├── scripts/          # Deployment scripts for Ethereum contracts
+│   │   └── deploy_contract.js # Script to deploy Election contract to Ethereum
+│   └── truffle-config.js # Truffle configuration file for Ethereum deployment
+│
+├── docs/                 # Documentation for the project
+│   ├── design.md         # System design documentation
+│   ├── setup.md          # Setup instructions for the project
+│   └── api.md            # API documentation for backend
+│
+├── tests/                # End-to-end and integration tests (e.g., using Cypress)
+│   └── e2e.test.js       # End-to-end tests for the entire voting system
+│
+├── .gitignore            # Files to ignore in version control
+├── README.md             # Project description, instructions, and setup guide
+└── package.json          # Project-level dependencies and scripts
