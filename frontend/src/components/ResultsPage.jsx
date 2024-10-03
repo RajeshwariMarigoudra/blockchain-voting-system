@@ -17,18 +17,24 @@ const ResultsPage = () => {
     fetchResults();
   }, []);
 
-  return (
-    <div>
-      <h2>Election Results</h2>
-      <ul>
-        {results.map((result, index) => (
+return (
+  <div>
+    <h2>Election Results</h2>
+    <ul>
+      {Array.isArray(results) && results.length > 0 ? (
+        results.map((result, index) => (
           <li key={index}>
             Candidate {index + 1}: {result} votes
           </li>
-        ))}
-      </ul>
-    </div>
-  );
+        ))
+      ) : (
+        <li>No results available</li>
+      )}
+    </ul>
+  </div>
+);
+
+  
 };
 
 export default ResultsPage;

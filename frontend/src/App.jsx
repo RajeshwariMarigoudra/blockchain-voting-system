@@ -5,6 +5,7 @@ import VotingPage from './components/VotingPage';
 import ResultsPage from './components/ResultsPage';
 import { VoteProvider } from './state/voteContext';
 import './App.css';
+import HomePage from './pages/HomePage';
 
 function App() {
   return (
@@ -20,7 +21,7 @@ function App() {
             </ul>
           </nav>
           <Routes>
-            <Route path="/" element={<HomePage />} />
+            <Route path="/" element={<HomePage/>} />
             <Route path="/register" element={<VoterRegistration />} />
             <Route path="/vote" element={<VotingPage />} />
             <Route path="/results" element={<ResultsPage />} />
